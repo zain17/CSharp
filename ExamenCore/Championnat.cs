@@ -4,13 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ExamenJanvier2015
+namespace ExamenCore
 {
-    class Program
+    enum Championnat
     {
-        static void Main(string[] args)
-        {
-
-        }
+        Italie, Angleterren, France, Espagne, Allemagne
     }
 }
