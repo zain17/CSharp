@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ExamenCore
 {
-    enum Championnat
+    public enum Championnat
     {
         Italie, Angleterren, France, Espagne, Allemagne
     }

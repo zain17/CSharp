@@ -6,15 +6,33 @@ using System.Threading.Tasks;
 
 namespace ExamenCore
 {
-    class Joueur
+    public class Joueur    
     {
+
         /*
          *  Champs
          */
+        private string nom;
         private int noteGlobal;
         private int nbBut;
         private int nbDuel;
         private Championnat champ;
+        public Joueur() { }
+        public Joueur(string nom, int noteGlobal, Championnat champ)
+        {
+            this.noteGlobal = noteGlobal;
+            this.champ = champ;
+            this.nom = nom;
+        }
+        public Joueur(string nom, int noteGlobal, int nbBut, int nbDuel, Championnat champ)
+        {
+            this.noteGlobal = noteGlobal;
+            this.nbBut = nbBut;
+            this.nbDuel = nbDuel;
+            this.champ = champ;
+            this.nom = nom;
+        }
+
         /*
          *  Propriétés
          */
@@ -69,8 +87,32 @@ namespace ExamenCore
                 champ = value;
             }
         }
+
+        public string Nom
+        {
+            get
+            {
+                return nom;
+            }
+
+            set
+            {
+                nom = value;
+            }
+        }
+
         /*
          * Méthodes
          */
+        public override string ToString()
+        {
+            return "Joueur:{"+
+                "nom:"+nom+","+
+                "note global :" + noteGlobal + "," +
+                "nombre des buts:" + nbBut + "," +
+                "nombre des duels:" + nbDuel + "," +
+                "championnat:" + champ + "," +
+                "}";
+        }
     }
 }
