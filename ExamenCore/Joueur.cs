@@ -17,6 +17,7 @@ namespace ExamenCore
         private int nbBut;
         private int nbDuel;
         private Championnat champ;
+
         public Joueur() { }
         public Joueur(string nom, int noteGlobal, Championnat champ)
         {
@@ -75,7 +76,7 @@ namespace ExamenCore
             }
         }
 
-        internal Championnat Champ
+        public Championnat Champ
         {
             get
             {
